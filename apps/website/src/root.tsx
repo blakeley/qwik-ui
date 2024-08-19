@@ -1,11 +1,5 @@
-import {
-  component$,
-  useContextProvider,
-  useStore,
-  useStyles$,
-  PrefetchGraph,
-  PrefetchServiceWorker,
-} from '@builder.io/qwik';
+import { component$, useContextProvider, useStore, useStyles$ } from '@builder.io/qwik';
+import { PrefetchGraph, PrefetchServiceWorker } from '@builder.io/qwik';
 import { QwikCityProvider, RouterOutlet } from '@builder.io/qwik-city';
 
 import { APP_STATE_CONTEXT_ID } from './_state/app-state-context-id';
