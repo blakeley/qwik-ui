@@ -112,10 +112,12 @@ export const HModalPanel = component$((props: PropsOf<'dialog'>) => {
       role={context.alert === true ? 'alertdialog' : 'dialog'}
       ref={panelRef}
       onKeyDown$={[handleKeyDownSync$, handleKeyDown$, props.onKeyDown$]}
-      onClick$={async (e) => {
+      onClick$={[
+        ...props.onClick$,
+        async (e) => {
         e.stopPropagation();
         await closeOnBackdropClick$(e);
-      }}
+      ]}}
     >
       <Slot />
     </dialog>
